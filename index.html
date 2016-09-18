@@ -1,10 +1,10 @@
 <html>
   <head>
-    <title>Do you feel like going OutTonight?</title>
+    <title>Torben Meyer</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|Pacifico" rel="stylesheet">
     <style>
+    /* general */
       body,html {
-        background-color: #000000;
         height: 100%;
       }
       div {
@@ -16,40 +16,101 @@
       p {
         width: 100%;
         text-align: center;
+        position: relative;
+        top: -50px;
 
       }
-      span {
-        color: #FFFFFF;
 
 
-      }
-      span.emphasis:hover {
-        color: #46D246;
-            text-shadow: 0px 0px 14px #46D246;
-      }
-      span.question {
-        font-family: 'Josefin Sans', sans-serif;
+      .subtitle {
+        font-family: 'Abel', sans-serif;
         font-size: 20px;
 
       }
-      span.emphasis {
-        font-family: 'Pacifico', cursive;
+      .emphasis {
         font-weight: bold;
         font-size: 80px;
-            cursor: pointer;
+        transition: 0.4s;
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      a.subtitle{
+        font-size: 13px;
+      }
+
+      /* colors & fonts */
+      body {
+        background-color: #000000;
+      }
+      * {
+        color: #FFFFFF;
+      }
+      .subtitle {
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .emphasis {
+          font-family: 'Pacifico', cursive;
+      }
+
+      a:hover {
+        color: #46D246;
+        text-shadow: 0px 0px 14px #46D246;
       }
 
     </style>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   </head>
   <body>
     <div>
       <p>
-        <span class='question'>Do you feel like going</span><br />
-        <span class='emphasis'>OutTonight?</span><br  /><br>
-        <span class="question">Coming soon.</span>
+        <span class='subtitle'>Do you feel like going</span><br />
+        <a class='emphasis' href='http://www.outtonight.de'>OutTonight?</a><br  /><br>
+        <span class="subtitle">Coming soon.</span>
+        <br  /><br /><br><br>
+        <script type="text/javascript" language="javascript">
+            <!--
+            // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+            // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+            // This code is freeware provided these four comment lines remain intact
+            // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+            { coded = "Fh6b@b9aabhFzMa.5c"
+              key = "xh6Fc28ZAy1qIOdPzojMslpEtuHUvQ4K5mVbTwYD3La9GnfieBRJ0SCXNk7Wgr"
+              shift=coded.length
+              link=""
+              for (i=0; i<coded.length; i++) {
+                if (key.indexOf(coded.charAt(i))==-1) {
+                  ltr = coded.charAt(i)
+                  link += (ltr)
+                }
+                else {
+                  ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+                  link += (key.charAt(ltr))
+                }
+              }
+            document.write("<a href='mailto:"+link+"' class='subtitle en'>Contact</a>");
+            document.write("<a href='mailto:"+link+"' class='subtitle de'>Kontakt</a>");
+            }
+            //-->
+            </script>
       </p>
 
     </div>
-  </br/>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.substring(0, 2);
+       if(userLang == 'de'){
+         $(".en").hide();
+       }else{
+         $(".de").hide();
+       }
+    });
+
+   </script>
   </body>
 </html>
